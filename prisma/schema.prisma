@@ -86,6 +86,8 @@ model Assignment {
   courseId String
   course   Course @relation(fields: [courseId], references: [id], onDelete: Cascade)
 
+  userProgress UserProgress[]
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -122,6 +124,9 @@ model UserProgress {
   chapterId String
   chapter   Chapter @relation(fields: [chapterId], references: [id], onDelete: Cascade)
 
+  assignmentId String
+  assignment   Assignment @relation(fields: [assignmentId], references: [id], onDelete: Cascade)
+
   isCompleted Boolean @default(false)
 
   createdAt DateTime @default(now())
@@ -129,4 +134,5 @@ model UserProgress {
 
   @@unique([userId, chapterId])
   @@index([chapterId])
+  @@index([assignmentId])
 }

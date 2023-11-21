@@ -54,7 +54,7 @@ const AssignmentIdPage = async ({
       {!assignment.isPublished && (
         <Banner
           variant="warning"
-          label="This assignment is unpublished. It will not be visible in the course"
+          label="This schoolwork is unpublished. It will not be visible in the course"
         />
       )}
       <div className="p-6">
@@ -70,7 +70,7 @@ const AssignmentIdPage = async ({
             <div className="flex items-center justify-between w-full">
               <div className="flex flex-col gap-y-2">
                 <h1 className="text-2xl font-medium">
-                  Assignment Creation
+                  Schoolwork Creation
                 </h1>
                 <span className="text-sm text-slate-700">
                   Complete all fields {completionText}
@@ -91,7 +91,7 @@ const AssignmentIdPage = async ({
               <div className="flex items-center gap-x-2">
                 <IconBadge icon={LayoutDashboard} />
                 <h2 className="text-xl">
-                  Customize your assignment
+                  Customize your schoolwork
                 </h2>
               </div>
               <AssignmentTitleForm
@@ -120,12 +120,7 @@ const AssignmentIdPage = async ({
             </div>
           </div>
           <div>
-                <div className="flex items-center gap-x-2">
-                <IconBadge icon={File} />
-                <h2 className="text-xl">
-                  Resources & Attachments
-                </h2>
-              </div>
+
 
           </div>
         </div>

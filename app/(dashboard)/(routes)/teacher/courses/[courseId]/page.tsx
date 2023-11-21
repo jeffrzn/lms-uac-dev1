@@ -151,7 +151,7 @@ const CourseIdPage = async ({
               <div className="flex items-center gap-x-2">
                 <IconBadge icon={ListChecks} />
                 <h2 className="text-xl">
-                  Assignments
+                  Schoolworks
                 </h2>
               </div>
               <AssignmentForm

@@ -58,7 +58,7 @@ export const AssignmentForm = ({
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       await axios.post(`/api/courses/${courseId}/assignments`, values);
-      toast.success("Assignment created");
+      toast.success("Schoolwork created");
       toggleCreating();
       router.refresh();
     } catch {
@@ -73,7 +73,7 @@ export const AssignmentForm = ({
       await axios.put(`/api/courses/${courseId}/assignments/reorder`, {
         list: updateData
       });
-      toast.success("Assignments reordered");
+      toast.success("Schoolworks reordered");
       router.refresh();
     } catch {
       toast.error("Something went wrong");
@@ -94,14 +94,14 @@ export const AssignmentForm = ({
         </div>
       )}
       <div className="font-medium flex items-center justify-between">
-        Course assignment
+        Course Schoolworks
         <Button onClick={toggleCreating} variant="ghost">
           {isCreating ? (
             <>Cancel</>
           ) : (
             <>
               <PlusCircle className="h-4 w-4 mr-2" />
-              Add a assignment
+              Add a schoolwork
             </>
           )}
         </Button>
@@ -142,7 +142,7 @@ export const AssignmentForm = ({
           "text-sm mt-2",
           !initialData.assignment.length && "text-slate-500 italic"
         )}>
-          {!initialData.assignment.length && "No assignment"}
+          {!initialData.assignment.length && "No schoolworks"}
           <AssignmentList
             onEdit={onEdit}
             onReorder={onReorder}
@@ -152,7 +152,7 @@ export const AssignmentForm = ({
       )}
       {!isCreating && (
         <p className="text-xs text-muted-foreground mt-4">
-          Drag and drop to reorder the assignments
+          Drag and drop to reorder the schoolworks
         </p>
       )}
     </div>

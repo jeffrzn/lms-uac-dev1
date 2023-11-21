@@ -11,6 +11,11 @@ const guestRoutes = [
         href: "/",
     },
     {
+        icon: Layout,
+        label: "Assignments & Quizzes",
+        href: "/schoolworks",
+    },
+    {
         icon: Compass,
         label: "Browse",
         href: "/search",

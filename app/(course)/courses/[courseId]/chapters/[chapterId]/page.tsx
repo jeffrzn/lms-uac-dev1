@@ -8,7 +8,6 @@ import { Separator } from "@/components/ui/separator";
 import { Preview } from "@/components/preview";
 
 import { VideoPlayer } from "./_components/video-player";
-import { CourseEnrollButton } from "./_components/course-enroll-button";
 import { CourseProgressButton } from "./_components/course-progress-button";
 
 const ChapterIdPage = async ({
@@ -92,7 +91,7 @@ const ChapterIdPage = async ({
 
           </div>
           <Separator />
-          <div>
+          <div className="p-1">
             <Preview value={chapter.description!} />
           </div>
           {!!attachments.length && (
@@ -104,7 +103,7 @@ const ChapterIdPage = async ({
                     href={attachment.url}
                     target="_blank"
                     key={attachment.id}
-                    className="flex items-center p-3 w-full bg-sky-200 border text-yellow-700 rounded-md hover:underline"
+                    className="flex items-center p-3 w-full bg-yellow-50 border text-yellow-700 rounded-md hover:underline"
                   >
                     <File />
                     <p className="line-clamp-1">
